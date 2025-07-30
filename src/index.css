@@ -1,128 +1,134 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.sing_up_style
-{
+.sing_up_style {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url('./Assets/car-wash-image.png');
+  background-image: url("./assets/car-wash-image.png");
   background-repeat: no-repeat;
-  background-size:cover
-  
-
-  
+  background-size: cover;
 }
-.box
-{
+.box {
   position: relative;
   width: 380px;
   height: 420px;
   background: #1c1c1c;
   border-radius: 8px;
   overflow: hidden;
-  
 }
-.box::before
-{
-  content: '';
+.box::before {
+  content: "";
   top: -50%;
   left: -50%;
   position: absolute;
   width: 380px;
   height: 420px;
-  background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #45f3ff,
+    #45f3ff,
+    #45f3ff
+  );
   z-index: 1;
   transform-origin: bottom right;
-  animation: animate 6s linear infinite ;
+  animation: animate 6s linear infinite;
 }
-.box::after
-{
-  content: '';
+.box::after {
+  content: "";
   top: -50%;
   left: -50%;
   position: absolute;
   width: 380px;
   height: 420px;
-  background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #45f3ff,
+    #45f3ff,
+    #45f3ff
+  );
   z-index: 1;
   transform-origin: bottom right;
-  animation: animate 6s linear infinite ;
+  animation: animate 6s linear infinite;
   animation-delay: -3s;
 }
-.borderLine
-{
+.borderLine {
   position: absolute;
   top: 0;
   inset: 0;
 }
-.borderLine::before
-{
-  
-  content: '';
+.borderLine::before {
+  content: "";
   top: -50%;
   left: -50%;
   position: absolute;
   width: 380px;
   height: 420px;
-  background: linear-gradient(0deg,transparent,transparent,#ff2770,#ff2770,#ff2770);
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #ff2770,
+    #ff2770,
+    #ff2770
+  );
   z-index: 1;
   transform-origin: bottom right;
-  animation: animate 6s linear infinite ;
+  animation: animate 6s linear infinite;
   animation-delay: -1.5s;
-
 }
-.borderLine::after
-{
-
-  content: '';
+.borderLine::after {
+  content: "";
   top: -50%;
   left: -50%;
   position: absolute;
   width: 380px;
   height: 420px;
-  background: linear-gradient(0deg,transparent,transparent,#ff2770,#ff2770,#ff2770);
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #ff2770,
+    #ff2770,
+    #ff2770
+  );
   z-index: 1;
   transform-origin: bottom right;
-  animation: animate 6s linear infinite ;
+  animation: animate 6s linear infinite;
   animation-delay: -4.5s;
-
 }
 @keyframes animate {
-  0%
-  {
-    transform: rotate(0deg);;
+  0% {
+    transform: rotate(0deg);
   }
-  100%
-  {
+  100% {
     transform: rotate(360deg);
   }
 }
-.box form
-{
+.box form {
   position: absolute;
   inset: 4px;
   background: #222;
-  padding: 50px ,40px;
+  padding: 50px, 40px;
   border-radius: 8px;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  
 }
-.box form .inputBox
-{position: relative;
+.box form .inputBox {
+  position: relative;
   width: 300px;
   margin-top: 25px;
   margin-left: 40px;
-  
-
 }
-.box form .inputBox input
-{
+.box form .inputBox input {
   position: relative;
   width: 100%;
   padding: 20px 0px 10px;
@@ -136,8 +142,7 @@
   transition: 0.5s;
   z-index: 10;
 }
-.box form .inputBox span
-{
+.box form .inputBox span {
   position: absolute;
   left: 0;
   padding: 20px 10px 10px;
@@ -148,14 +153,12 @@
   transition: 0.5s;
 }
 .box form .inputBox input:valid ~ span,
-.box form .inputBox input:focus ~ span
-{
-color: #fff;
-font-size: 0.75em;
-transform: translateY(-34px);
+.box form .inputBox input:focus ~ span {
+  color: #fff;
+  font-size: 0.75em;
+  transform: translateY(-34px);
 }
-.box form .inputBox i
-{
+.box form .inputBox i {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -168,12 +171,10 @@ transform: translateY(-34px);
   pointer-events: none;
 }
 .box form .inputBox input:valid ~ i,
-.box form .inputBox input:focus ~ i
-{
+.box form .inputBox input:focus ~ i {
   height: 30px;
 }
-.button1
-{
+.button1 {
   border-radius: 4px;
   margin-left: 40px;
   margin-top: 10px;
@@ -181,25 +182,21 @@ transform: translateY(-34px);
   outline: none;
   padding: 9px 25px;
   width: 300px;
-  
 }
-.regiser-nav{
+.regiser-nav {
   margin-top: 20px;
-    position: relative;
-    right: -750px;
-    top: -80px;
+  position: relative;
+  right: -750px;
+  top: -80px;
 }
 
-nav
-{
+nav {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   padding: 25px;
-  
 }
-.Button-controlerpage
-{
+.Button-controlerpage {
   border-radius: 4px;
   margin-left: 10px;
 
@@ -207,22 +204,14 @@ nav
   outline: none;
   padding: 9px 25px;
   width: 115px;
-background-color: darkturquoise;
- 
-  
+  background-color: darkturquoise;
 }
-.topBarStyle{
- 
- display: flex;
- justify-content: space-between;
- align-items: center;
+.topBarStyle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   border: none;
   outline: none;
   padding: 9px 25px;
-  
-
- 
-  
 }
-
