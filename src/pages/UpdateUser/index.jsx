@@ -1,22 +1,20 @@
-import { useEffect, useState } from "react"
-import axios from 'axios'
-import Forms from "./Form"
+import { useEffect, useState } from "react";
+import axios from "axios";
+import Forms from "@/Components/Form";
 
-export default function UpdateUser()
-{
-  const[Name,SetName]=useState('')
-  const[email,SetEmail]=useState('')
-  const id =window.location.pathname.split("/").slice(-1)[0];
-  useEffect(()=>{
-    fetch(`http://127.0.0.1:8000/api/user/showbyid/${id}`).then(res=>res.json()).then(data=>{
-   
-    SetName(data[0].name)  
-    SetEmail(data[0].email)
-    
-    });
-
-  },[id])
-    /* async function  submit(e)
+export default function UpdateUser() {
+  const [Name, SetName] = useState("");
+  const [email, SetEmail] = useState("");
+  const id = window.location.pathname.split("/").slice(-1)[0];
+  useEffect(() => {
+    fetch(`http://127.0.0.1:8000/api/user/showbyid/${id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        SetName(data[0].name);
+        SetEmail(data[0].email);
+      });
+  }, [id]);
+  /* async function  submit(e)
  {
    let Flag=true
     e.preventDefault()
@@ -47,8 +45,13 @@ export default function UpdateUser()
            catch(err){
 SetEmailError(err.response.status)}
 }*/
-  
-    
-   
-    return(<Forms button="Update User" name={Name} email={email} endpoint={`user/update/${id}`}/>)
+
+  return (
+    <Forms
+      button="Update User"
+      name={Name}
+      email={email}
+      endpoint={`user/update/${id}`}
+    />
+  );
 }
